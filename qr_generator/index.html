@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkpoint - QR Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+      </div>
+      <h1 class="title">Checkpoint</h1>
+      <p class="subtitle">QR Code Generator</p>
+    </div>
+
+    <div class="qr-container">
+      <div id="qrcode" class="qr-wrapper"></div>
+      <div class="qr-info">
+        <div class="timer-section">
+          <i class="ph ph-clock"></i>
+          <span id="timer">30s</span>
+        </div>
+        <p class="token-label">Token ID</p>
+        <p id="tokenId" class="token-id">Generating...</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <i class="ph ph-check-circle"></i>
+        <div>
+          <span class="stat-value" id="activeTokens">0</span>
+          <span class="stat-label">Active Tokens</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <i class="ph ph-recycle"></i>
+        <div>
+          <span class="stat-value" id="totalGenerated">0</span>
+          <span class="stat-label">Total Generated</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script type="module" src="generator.js"></script>
+</body>
+</html>
