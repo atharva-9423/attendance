@@ -1,4 +1,4 @@
-# Campus Verify - Attendance System
+# Checkpoint - Attendance System
 
 An elegant, professional, and minimal attendance tracking application with QR code scanning capabilities.
 
